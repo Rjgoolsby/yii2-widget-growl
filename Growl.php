@@ -251,7 +251,7 @@ class Growl extends \kartik\base\Widget
             AnimateAsset::register($view);
         }
         $this->registerPluginOptions('notify');
-        $js = '$.notify(' . Json::encode($this->_settings) . ', ' . $this->_hashVar . ');';
+        $js = 'jQuery.notify(' . Json::encode($this->_settings) . ', ' . $this->_hashVar . ');';
         if (!empty($this->delay) && $this->delay > 0) {
             $js = 'setTimeout(function () {' . $js . '}, ' . $this->delay . ');';
         }
